@@ -1,6 +1,6 @@
 <template>
   <div>
-          <titulo texto="Professores" />
+    <titulo texto="Professores" />
 
     <table>
       <thead>
@@ -9,11 +9,14 @@
         <th>Alunos</th>
       </thead>
       <tbody v-if="Professores.length">
-        <tr v-for="(Professor, index) in Professores" :key="index">
-          <td>{{ Professor.id }}</td>
-          <td>{{ Professor.nome }} {{ Professor.sobrenome }}</td>
+        <tr v-for="(professor, index) in Professores" :key="index">
+          <td>{{ professor.id }}</td>
+          <router-link to="/alunos" tag="td" style="cursor: pointer">
+            {{ professor.nome }}
+            {{ professor.sobrenome }}
+          </router-link>
           <td>
-             3 
+            {{ professor.qtdAlunos }}
           </td>
         </tr>
       </tbody>
@@ -25,21 +28,51 @@
 </template>
 
 <script>
-import Titulo from'../_share/Titulo'
+import Titulo from "../_share/Titulo";
 
 export default {
-    components:{
-Titulo
+  components: {
+    Titulo,
+  },
+  data() {
+    return {
+      Professores: [],
+      Alunos: [],
+    };
+  },
+  created() {
+    this.$http
+      .get("http://localhost:3000/alunos")
+      .then((res) => res.json())
+      .then((alunos) => {
+        this.Alunos = alunos;
+        this.carregarProfessores();
+      });
+  },
+  props: {},
+  methods: {
+    pegarQtdAlunosPorProfessor() {
+      this.Professores.forEach((professor, index) => {
+        professor = {
+          id: professor.id,
+          nome: professor.nome,
+          qtdAlunos: this.Alunos.filter(
+            aluno => aluno.professor.id == professor.id
+          ).length,
+        };
+        this.Professores[index] = professor;
+      });
     },
-    data() {
-        return {
-            Professores:[
-                {id:1,nome: 'Miguel'},
-                {id:2,nome: 'Paula'},
-                {id:3,nome: 'Alex'}
-            ]
-        }
+    carregarProfessores() {
+      this.$http
+        .get("http://localhost:3000/professores")
+        .then(res => res.json())
+        .then(professor => {
+          this.Professores = professor;
+          this.pegarQtdAlunosPorProfessor();
+        });
     },
+  },
 };
 </script>
 
