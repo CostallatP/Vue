@@ -68,6 +68,7 @@ export default {
         .then((aluno) => {
           this.alunos.push(aluno);
           this.nome = "";
+        
         });
     },
     remover(aluno) {
@@ -82,6 +83,7 @@ export default {
 
 <style scoped>
 input {
+  width: calc(100% - 192px);
   border: 0;
   padding: 20px;
   font-size: 1.3em;
@@ -89,13 +91,14 @@ input {
   display: inline;
 }
 .btnInput {
+  width: 150px;
   display: inline;
   border: 0px;
   padding: 20px;
   font-size: 1.3em;
   background-color: rgb(116, 115, 115);
 }
-.btnInput {
+.btnInput:hover {
   padding: 20px;
   margin: 0px;
   border: 0px;

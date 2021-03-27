@@ -1,17 +1,25 @@
 <template>
   <div id="app">
-
-  <Alunos/>
+<Nav></Nav>
+<div class="marginPrincipal">
+ <router-view></router-view>
+  </div>
   </div>
 </template>
 
 <script>
-import Alunos from './components/Aluno/Alunos.vue'
+import Alunos from './components/Aluno/Alunos'
+import Professor from './components/Professor/Professor'
+import Sobre from './components/Sobre/Sobre'
+import Nav from './components/_nav/Nav'
 
 export default {
-  name: 'App',
+  name: 'app',
   components: {
-    Alunos
+    Alunos,
+    Professor,
+    Sobre,
+    Nav
   }
 }
 </script>
@@ -29,8 +37,12 @@ body, html {
   margin: 0;
   height: 100%;
 }
+.marginPrincipal{
+  width: 50%;
+  margin: auto;
+}
 #app {
-
+width: 100%;
 }
 .btn_Danger{
     background-color: red;
