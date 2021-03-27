@@ -1,9 +1,11 @@
 # Vue 
 
+Etapa no curso: sessão 3 de 7.
 Projeto Full-Stack com Vue JS + ASP.NET Core Web API + EF Core com foco que eu aprenda mais sobre Vue e ASP.net
 fornecido pelo curso:
 https://www.udemy.com/course/fullstack-vuejs-dotnetcore-efcore/
 
+projeto1:
 Telas: 
 
 padrão:
