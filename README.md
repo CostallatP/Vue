@@ -8,7 +8,18 @@ https://www.udemy.com/course/fullstack-vuejs-dotnetcore-efcore/
 V 1.1:
 Agora os alunos são vinculados aos professores, e apenas clicando no professor será possivel adicionar o aluno ou deletar
 
-projeto1:
+Telas:
+
+professores:  (ainda criados apenas dentro do banco de dados)
+![image](https://user-images.githubusercontent.com/48732887/113481193-7bd80480-946e-11eb-990c-54ef4d89ac9b.png)
+
+alunos de professores: (podendo ser alterado, visto e deletado)
+![image](https://user-images.githubusercontent.com/48732887/113481206-914d2e80-946e-11eb-9886-2b7d44ab3066.png)
+
+todos alunos: (sem poder adicionar apenas ver e deletar)
+![image](https://user-images.githubusercontent.com/48732887/113481213-9b6f2d00-946e-11eb-8d1a-55d4724ee07a.png)
+
+V 1.0
 Telas: 
 
 padrão:
