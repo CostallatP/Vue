@@ -2,44 +2,45 @@
   "professores": [
     {
       "id": 1,
-      "nome": "um"
+      "nome": "Adriana"
     },
     {
       "id": 2,
-      "nome": "dois"
+      "nome": "Bernado"
     },
     {
       "id": 3,
-      "nome": "tres"
+      "nome": "Carlos"
     }
   ],
   "alunos": [
     {
+      "id": 1,
       "nome": "Miguel",
-      "sobrenome": "",
+      "sobrenome": "Costallat",
+      "dataNasc": "28/04/2000",
       "professor": {
         "id": 1,
-        "nome": "um"
-      },
-      "id": 1
+        "nome": "Adriana"
+      }
     },
     {
-      "nome": "andre",
+      "nome": "Andre",
       "sobrenome": "",
       "professor": {
         "id": 2,
-        "nome": "dois"
+        "nome": "Bernado"
       },
-      "id": 2
+      "id": 4
     },
     {
-      "nome": "aleuiaaaa",
+      "nome": "José",
       "sobrenome": "",
       "professor": {
         "id": 3,
-        "nome": "tres"
+        "nome": "Carlos"
       },
-      "id": 3
+      "id": 5
     }
   ]
 }
