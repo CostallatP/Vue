@@ -1,6 +1,6 @@
 <template>
   <div>
-    <titulo texto="Professores" />
+    <titulo texto="Professores" btnVoltar="true"/>
 
     <table>
       <thead>
@@ -10,21 +10,23 @@
       </thead>
       <tbody v-if="Professores.length">
         <tr v-for="(professor, index) in Professores" :key="index">
-          <td class="colPequeno" >{{professor.id}}</td>
-          <router-link 
-          :to="`/alunos/${professor.id}`"
-          tag="td" 
-          style="cursor: pointer"
-          >{{professor.nome}}{{professor.sobrenome}}
+          <td class="colPequeno">{{ professor.id }}</td>
+          <router-link
+            :to="`/alunos/${professor.id}`"
+            tag="td"
+            style="cursor: pointer"
+            >{{ professor.nome }}{{ professor.sobrenome }}
           </router-link>
 
           <td class="colPequeno">
-            {{professor.qtdAlunos}}
+            {{ professor.qtdAlunos }}
           </td>
         </tr>
       </tbody>
       <tfoot v-else>
-        nenhum Professor encontrado
+        <tr>
+          <td colspan="3" style="text-align: center"> <h5>nenhum Professor encontrado</h5></td>
+        </tr>
       </tfoot>
     </table>
   </div>
@@ -45,44 +47,43 @@ export default {
   },
   created() {
     this.$http
-      .get('http://localhost:3000/alunos')
-      .then(res => res.json())
-      .then(alunos => {this.Alunos = alunos;
+      .get("http://localhost:5000/api/aluno")
+      .then((res) => res.json())
+      .then((alunos) => {
+        this.Alunos = alunos;
         this.carregarProfessores();
-      })
+      });
   },
-  props: {
-
-  },
+  props: {},
   methods: {
     pegarQtdAlunosPorProfessor() {
       this.Professores.forEach((professor, index) => {
         professor = {
           id: professor.id,
           nome: professor.nome,
-          qtdAlunos: this.Alunos.filter(aluno => 
-          aluno.professor.id == professor.id).length
-        }
+          qtdAlunos: this.Alunos.filter(
+            (aluno) => aluno.professor.id == professor.id
+          ).length,
+        };
         this.Professores[index] = professor;
       });
-      
     },
     carregarProfessores() {
       this.$http
-        .get("http://localhost:3000/professores")
-        .then(res => res.json())
-        .then(professor => {
-          this.Professores = professor
+        .get("http://localhost:5000/api/professor")
+        .then((res) => res.json())
+        .then((professor) => {
+          this.Professores = professor;
           this.pegarQtdAlunosPorProfessor();
         });
-    }
+    },
   },
 };
 </script>
 
 <style scoped>
-.colPequeno{
+.colPequeno {
   text-align: center;
-  width: 15%
+  width: 15%;
 }
 </style>
