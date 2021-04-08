@@ -1,41 +1,28 @@
 # Vue 
 
-Etapa no curso: sessão 4 de 7.
+
 Projeto Full-Stack com Vue JS + ASP.NET Core Web API + EF Core com foco que eu aprenda mais sobre Vue e ASP.net
 fornecido pelo curso:
 https://www.udemy.com/course/fullstack-vuejs-dotnetcore-efcore/
 
-V 1.1:
-Agora os alunos são vinculados aos professores, e apenas clicando no professor será possivel adicionar o aluno ou deletar
 
 Telas:
 
-professores:  (ainda criados apenas dentro do banco de dados)
-![image](https://user-images.githubusercontent.com/48732887/113481193-7bd80480-946e-11eb-990c-54ef4d89ac9b.png)
+professores:  
+![image](https://user-images.githubusercontent.com/48732887/114094340-92c58f00-9892-11eb-83f5-96f93b464f63.png)
 
-alunos de professores: (podendo ser alterado, visto e deletado)
-![image](https://user-images.githubusercontent.com/48732887/113481206-914d2e80-946e-11eb-9886-2b7d44ab3066.png)
+alunos de professores:
+![image](https://user-images.githubusercontent.com/48732887/114094405-a670f580-9892-11eb-8ff8-83123672e1ae.png)
 
-todos alunos: (sem poder adicionar apenas ver e deletar)
-![image](https://user-images.githubusercontent.com/48732887/113481213-9b6f2d00-946e-11eb-8d1a-55d4724ee07a.png)
 
-V 1.0
-Telas: 
+todos alunos: 
+![image](https://user-images.githubusercontent.com/48732887/114094269-7f1a2880-9892-11eb-9552-0d784f0e1147.png)
 
-padrão:
-![image](https://user-images.githubusercontent.com/48732887/112658010-bff55480-8e31-11eb-947e-eba9bc7fd3af.png)
+Aluno Detalhe:
+![image](https://user-images.githubusercontent.com/48732887/114094512-c6a0b480-9892-11eb-9ac5-6a8185ace237.png)
 
-Algo Removido:
-![image](https://user-images.githubusercontent.com/48732887/112658098-d6031500-8e31-11eb-8842-1c624bb4e768.png)
-
-Com nada:
-![image](https://user-images.githubusercontent.com/48732887/112658166-e7e4b800-8e31-11eb-8e10-fe6e88f8ed09.png)
-
-Json:
-![image](https://user-images.githubusercontent.com/48732887/112658218-f6cb6a80-8e31-11eb-9310-3a3009997adc.png)
-
-VUE server:
-![image](https://user-images.githubusercontent.com/48732887/112658316-0ea2ee80-8e32-11eb-8b4d-323a8ce5d04c.png)
+Editando Aluno:
+![image](https://user-images.githubusercontent.com/48732887/114094540-cf918600-9892-11eb-888f-9037b75ceabe.png)
 
 
 ## Project setup
